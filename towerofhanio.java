@@ -5,7 +5,7 @@ int arr[][]= new int[3][3],top[]=new int[3],vpop;
 
 towerofhanio(){
     for (int i = 2; i >= 0; i--) {
-        arr[0][i]=i+1;}
+        arr[0][i]=3-i;}
         top[0]=2;
 }
 public void print(){
@@ -17,6 +17,7 @@ public void print(){
 public void pop(int a){
     a-=1;
   vpop=arr[a][top[a]];
+  arr[a][top[a]]=0;
   top[a]--;
 }
 public void push(int a){
