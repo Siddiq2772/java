@@ -28,15 +28,15 @@ public void push(int a){
   }
 public static void main(String[] args) {
     towerofhanio t = new towerofhanio();
+    Scanner sc = new Scanner(System.in);
     while (true) {
-        t.print();
-        Scanner sc = new Scanner(System.in);
+        t.print();        
         System.out.print("Enter to pop form: ");
         t.pop(sc.nextInt());
         System.out.print("Enter to push to: ");
         t.push(sc.nextInt());
         
-        sc.close();
+        
     }
 }
     
