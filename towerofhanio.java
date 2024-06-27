@@ -15,8 +15,8 @@ public void print(){
         System.out.println();
     }
 }
-public void pop(int a){
-    a-=1;
+public void pop(int a){ 
+  a-=1;
   vpop=arr[a][top[a]];
   arr[a][top[a]]=0;
   top[a]--;
