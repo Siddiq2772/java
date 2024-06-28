@@ -16,30 +16,42 @@ public void print(){
         System.out.println();
     }
 }
-public void pop(int a){ 
+public void pop(int a)  { 
   a-=1;
-  vpop=arr[a][top[a]];
-  arr[a][top[a]]=0;
-  top[a]--;
+  try {
+    vpop=arr[a][top[a]];
+    arr[a][top[a]]=0;
+    top[a]--;
+    
+  } catch (Exception e) {
+    System.out.println("invalid choice!! try again");
+  }
+ 
 }
 public void push(int a){
     a-=1;
-    top[a]++;
+    try {
+        top[a]++;
     arr[a][top[a]]=vpop;
+    } catch (Exception e) {
+        System.out.println("invalid choice!! try again");
+    }
+    
     
   }
 public static void main(String[] args) {
     towerofhanio t = new towerofhanio();
     Scanner sc = new Scanner(System.in);
-    while (true) {
+    while (t.top[2]!=2) {
         t.print();        
         System.out.print("Enter to pop form: ");
         t.pop(sc.nextInt());
         System.out.print("Enter to push to: ");
-        t.push(sc.nextInt());
-        
+        t.push(sc.nextInt());        
         
     }
+    t.print();
+    sc.close();
 }
     
 }
