@@ -6,7 +6,8 @@ int arr[][]= new int[3][3],top[]=new int[3],vpop;
 
 towerofhanio(){
     for (int i = 2; i >= 0; i--) {
-        arr[0][i]=3-i;}
+        arr[0][i]=3-i;
+        top[i]=-1;}
         top[0]=2;
 }
 public void print(){
@@ -23,8 +24,9 @@ public void pop(int a){
 }
 public void push(int a){
     a-=1;
-    arr[a][top[a]]=vpop;
     top[a]++;
+    arr[a][top[a]]=vpop;
+    
   }
 public static void main(String[] args) {
     towerofhanio t = new towerofhanio();
