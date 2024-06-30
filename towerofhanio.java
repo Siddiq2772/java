@@ -30,10 +30,17 @@ public class towerofhanio {
     public void pop(int a) {
         a -= 1;
         try {
-            vpop = arr[a][top[a]];
-            arr[a][top[a]] = 0;
-            top[a]--;
-            temp =a;
+            if(top[a]!=-1){
+                vpop = arr[a][top[a]];
+                arr[a][top[a]] = 0;
+                top[a]--;
+                temp =a;
+            }
+            else{
+            System.out.println("invalid choice!! try again" );
+                
+            }
+            
 
         } catch (Exception e) {
             System.out.println("invalid choice!! try again" );
