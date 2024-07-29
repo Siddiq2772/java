@@ -24,15 +24,15 @@ import java.util.Scanner;
 
 public class practice_set14 {
     public static int forloop (int i){
-        Scanner sc = new Scanner(System.in);
+       
         try {
-            int a = sc.nextInt();
-            if (a<18) {
-                
+            
+            if (i<18) {
+                return 0;
             } else {
                 
             }
-            }
+            
         } catch (Exception e) {
             System.out.println(e);
         } finally{
@@ -40,5 +40,6 @@ public class practice_set14 {
         }
         return 1; }
 public static void main(String[] args) {
-    forloop(10);
+    Scanner sc = new Scanner(System.in);
+    forloop(sc.nextInt());
 }}
